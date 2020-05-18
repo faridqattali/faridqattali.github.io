@@ -1,0 +1,212 @@
+//colors
+$primary:#08f04d;
+$secondary:#1b356d;
+$ternary:#fff;
+
+//font
+$big_font:20px;
+$common_padding:20px;
+
+//to be extended by some headings 
+
+%heading-style{
+    background-color: $primary;
+    color: $ternary;
+    text-transform: uppercase;
+    text-align: center;
+    padding: $common_padding;
+}
+
+// to be extended by some texts
+
+%text_style{
+    font-size: $big_font;
+    padding: $common_padding;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 30% auto;
+    
+}
+
+//------- media query for viewport less than 700 px 
+
+@media screen and (max-width: 700px) {
+    .wrapper{
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+
+    }
+}
+//----------- sidebar style start ---------
+.wrapper div#sidebar{
+    background-color: $secondary;
+    text-align: center;
+    padding: $common_padding;
+    position: sticky;
+    height: 100%;
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        
+    }
+
+    h1{
+        color: $ternary;
+        font-size: 30px;
+        margin: 40px 0;
+    }
+
+    hr{
+        background-color: $ternary;
+        
+        height: 5px;
+    }
+    nav{
+        margin-top: 50px;
+        ul{
+            list-style-type: none;
+            li{
+                margin-top: 20px;
+                text-align: justify;
+                a{
+                    text-decoration: none;
+                    color: $ternary;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: bold;
+                    
+
+                }
+                a:hover{
+                    text-decoration-style: solid;
+                    text-decoration-line: underline;
+                    text-decoration-color: $ternary;
+                    color: $primary;
+                }
+            }
+        }
+    }
+    
+}
+
+//sidebar style end
+
+
+//------------- main-content style start ---------
+.wrapper div#main-content{
+    //------- About page style start ---------
+        div#about-info{
+            position: sticky;
+            h2{
+                @extend %heading-style;
+            }
+            p{
+                @extend %text_style;
+            }
+        }
+
+        div#intrests{
+            h3{
+                @extend %heading-style;
+            }
+            ol{
+                @extend %text_style;
+                li{
+                    margin-left: 20px;
+                    
+                }
+            }
+        }
+    
+        div#languages{
+            
+            h3{
+                @extend %heading-style;
+            }
+            
+            table,th,td{
+                border: 1px solid #000;
+                width: 100%;
+                margin: auto;
+
+                th,td{
+                    padding: 10px;
+                }
+                th{
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+                tr:nth-child(odd){
+                    background-color: gray;
+                    color: $ternary;
+                }
+            }
+        }
+
+        //-------- about page style end ------
+
+        //-------- Education page style start -------
+        div#education{
+            h2{
+                @extend %heading-style;
+            }
+            table{
+                thead{
+                    tr{
+                        th{
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+
+        //-------- Education page style end --------
+
+        //-------- Experience page style start --------
+        div#experience{
+            h2{
+                @extend %heading-style;
+            }
+
+            ol{
+                li{
+                    padding: $common_padding;
+                    font-size: $big_font;
+                }
+            }
+        }
+        //-------- Experience page style end ---------
+
+        //------- Contact page style start ---------
+        div#contact{
+            h2{
+                @extend %heading-style;
+            }
+
+            ul{
+                li{
+                    list-style-type: none;
+                   font-size: $big_font;
+                }
+            }
+        }
+}
+
+//------------ main content style end -----------
+
+@media screen and (max-width: 700px){
+    .wrapper{
+        div#sidebar{
+            nav{
+                ul{
+                    li{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
