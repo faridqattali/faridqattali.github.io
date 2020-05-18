@@ -1,0 +1,110 @@
+.wrapper div#main-content div#contact h2, .wrapper div#main-content div#experience h2, .wrapper div#main-content div#education h2, .wrapper div#main-content div#languages h3, .wrapper div#main-content div#intrests h3, .wrapper div#main-content div#about-info h2 {
+  background-color: #08f04d;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+
+.wrapper div#main-content div#intrests ol, .wrapper div#main-content div#about-info p {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% auto;
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+  }
+}
+.wrapper div#sidebar {
+  background-color: #1b356d;
+  text-align: center;
+  padding: 20px;
+  position: sticky;
+  height: 100%;
+}
+.wrapper div#sidebar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+.wrapper div#sidebar h1 {
+  color: #fff;
+  font-size: 30px;
+  margin: 40px 0;
+}
+.wrapper div#sidebar hr {
+  background-color: #fff;
+  height: 5px;
+}
+.wrapper div#sidebar nav {
+  margin-top: 50px;
+}
+.wrapper div#sidebar nav ul {
+  list-style-type: none;
+}
+.wrapper div#sidebar nav ul li {
+  margin-top: 20px;
+  text-align: justify;
+}
+.wrapper div#sidebar nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+}
+.wrapper div#sidebar nav ul li a:hover {
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  text-decoration-color: #fff;
+  color: #08f04d;
+}
+
+.wrapper div#main-content div#about-info {
+  position: sticky;
+}
+.wrapper div#main-content div#intrests ol li {
+  margin-left: 20px;
+}
+.wrapper div#main-content div#languages table, .wrapper div#main-content div#languages th, .wrapper div#main-content div#languages td {
+  border: 1px solid #000;
+  width: 100%;
+  margin: auto;
+}
+.wrapper div#main-content div#languages table th, .wrapper div#main-content div#languages table td, .wrapper div#main-content div#languages th th, .wrapper div#main-content div#languages th td, .wrapper div#main-content div#languages td th, .wrapper div#main-content div#languages td td {
+  padding: 10px;
+}
+.wrapper div#main-content div#languages table th, .wrapper div#main-content div#languages th th, .wrapper div#main-content div#languages td th {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.wrapper div#main-content div#languages table tr:nth-child(odd), .wrapper div#main-content div#languages th tr:nth-child(odd), .wrapper div#main-content div#languages td tr:nth-child(odd) {
+  background-color: gray;
+  color: #fff;
+}
+.wrapper div#main-content div#education table thead tr th {
+  text-transform: uppercase;
+}
+.wrapper div#main-content div#experience ol li {
+  padding: 20px;
+  font-size: 20px;
+}
+.wrapper div#main-content div#contact ul li {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper div#sidebar nav ul li {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
